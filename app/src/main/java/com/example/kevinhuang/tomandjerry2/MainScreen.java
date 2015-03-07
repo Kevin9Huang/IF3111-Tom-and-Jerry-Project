@@ -22,6 +22,22 @@ public class MainScreen extends ActionBarActivity {
                 startActivity(catchintent);
             }
         });
+        final Button btnhowtoplay = (Button)findViewById(R.id.btnhowto);
+        btnhowtoplay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent catchintent = new Intent(view.getContext(),Howtoplay.class);
+                startActivity(catchintent);
+            }
+        });
+        final Button btnabout = (Button)findViewById(R.id.btnabout);
+        btnabout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent catchintent = new Intent(view.getContext(),report.class);
+                startActivity(catchintent);
+            }
+        });
         final Button btnCatchJerry = (Button)findViewById(R.id.btncatchjerry);
         btnCatchJerry.setOnClickListener(new View.OnClickListener() {
             @Override

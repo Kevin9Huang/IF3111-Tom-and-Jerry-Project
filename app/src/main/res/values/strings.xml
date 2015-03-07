@@ -13,5 +13,6 @@
     <string name="title_activity_maps">Map</string>
     <string name="notifjerrynotfound">Where is Jerry?</string>
     <string name="title_activity_catchjerry">catchjerry</string>
+    <string name="title_activity_report">report</string>
 
 </resources>

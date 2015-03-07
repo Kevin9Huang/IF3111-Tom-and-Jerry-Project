@@ -23,7 +23,6 @@ public class HandleJSON {
     private String longitude = "long";
     private String valid = "valid_until";
     private String urlString = null;
-    private JerryLocation jlocation;
 
     public volatile boolean parsingComplete = true;
     public HandleJSON(String url){
@@ -79,18 +78,18 @@ public class HandleJSON {
         });
         thread.start();
     }
-
     static String convertStreamToString(java.io.InputStream is) {
         java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
         return s.hasNext() ? s.next() : "";
     }
     private String unixToDate(String unix_timestamp) {
         long timestamp = Long.parseLong(unix_timestamp) * 1000;
-        jlocation.setTime(timestamp);
+
         TimeZone timeZone = TimeZone.getTimeZone("GMT+7");
         SimpleDateFormat sdf = new SimpleDateFormat("MMMM d, yyyy 'at' h:mm a");
         sdf.setTimeZone(timeZone);
         String date = sdf.format(timestamp);
+
         return date.toString();
     }
 }
